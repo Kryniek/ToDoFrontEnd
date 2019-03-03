@@ -1,0 +1,24 @@
+.TaskComponent {
+    position: relative;
+}
+
+.TaskComponent>.row {
+    transition: 0.35s ease-out;
+}
+
+.TaskComponent>.row>.col>p, .TaskComponent>.row>.col-3>p, .deleteButton, .editButton {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.TaskComponent>.row:hover>.col>p, .TaskComponent>.row:hover>.col-3>p, .deleteButton:hover, .editButton:hover {
+    color: rgb(255, 255, 255);
+}
+
+.TaskComponent>.row:hover {
+    background-color: rgb(0, 174, 255, 0.1);
+}
+
+.deleteButton:hover, .editButton:hover {
+    cursor: pointer;
+}
