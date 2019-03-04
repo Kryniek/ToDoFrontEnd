@@ -1,0 +1,7 @@
+hr{
+    width: 100%;
+    display: block;
+    margin: 4px 0;
+    overflow: hidden;
+    background-color: #aaaaaa;
+}

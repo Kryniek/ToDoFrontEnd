@@ -1,0 +1,24 @@
+.TaskEditComponent {
+    position: relative;
+}
+
+.TaskEditComponent>.row {
+    transition: 0.35s ease-out;
+}
+
+.TaskEditComponent>.row>.col>p, .TaskEditComponent>.row>.col-3>p, .confirmButton, .rejectButton {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.TaskEditComponent>.row:hover>.col>p, .TaskEditComponent>.row:hover>.col-3>p, .confirmButton:hover, .rejectButton:hover {
+    color: rgb(255, 255, 255);
+}
+
+.TaskEditComponent>.row:hover {
+    background-color: rgb(0, 174, 255, 0.1);
+}
+
+.confirmButton:hover, .rejectButton:hover {
+    cursor: pointer;
+}

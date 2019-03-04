@@ -1,0 +1,20 @@
+.TaskAddComponent {
+    position: relative;
+}
+
+.TaskAddComponent>.row {
+    transition: 0.35s ease-out;
+}
+
+.TaskAddComponent>.row>.col>p, .TaskAddComponent>.row>.col-3>p, .addButton {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.addButton:hover {
+    color: rgb(255, 255, 255);
+}
+
+.addButton:hover {
+    cursor: pointer;
+}
