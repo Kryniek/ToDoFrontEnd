@@ -25,21 +25,18 @@ body {
   font-family: "typeface-quicksand";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body::after {
-  background-image: url("../img/background.jpg");
   height: 100%;
+  width: 100%;
+  background-image: url("../img/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   content: ' ';
   display: block;
-  left: 0;
   position: absolute;
+  left: 0;
   top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 code {

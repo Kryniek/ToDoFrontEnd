@@ -1,0 +1,11 @@
+.ErrorComponent {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.ErrorComponent>svg {
+    font-size: 8vw;
+}
+
+.ErrorComponent>p {
+    font-size: 1.5vw;
+}

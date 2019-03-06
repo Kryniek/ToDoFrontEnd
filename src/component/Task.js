@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 import './../css/component/Task.css';
 
+import { DATE_FORMAT } from './constant/DateConstants';
 import TaskEdit from './TaskEdit';
 import TaskDelete from './TaskDelete';
 
@@ -48,7 +50,7 @@ export default class Task extends Component {
                         <p>{task.name}</p>
                     </div>
                     <div className="col-3">
-                        <p>{task.deadline}</p>
+                        <p><Moment date={task.deadline} format={DATE_FORMAT} /></p>
                     </div>
                     <div className="col-2">
                         <span className="col-6">

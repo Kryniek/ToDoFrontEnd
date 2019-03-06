@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import DateTime from 'react-datetime';
 import 'react-datetime/css/react-datetime.css';
@@ -28,7 +28,7 @@ export default class TaskEdit extends Component {
                     </span>
                     <span className="col-3">
                         <DateTime
-                            defaultValue={task.deadline}
+                            defaultValue={new Date(task.deadline)}
                             dateFormat="YYYY-MM-DD"
                             timeFormat="HH:mm:ss"
                             locale="pl"
