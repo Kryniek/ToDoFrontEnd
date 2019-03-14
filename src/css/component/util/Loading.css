@@ -1,0 +1,9 @@
+@import url("./LoadingAnimation.css");
+
+.LoadingComponent {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.LoadingComponent>svg {
+    font-size: 8vw;
+}
