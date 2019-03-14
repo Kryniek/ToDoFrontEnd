@@ -20,22 +20,12 @@ export default class ToDo extends Component {
         };
 
         this.getLoadedView = this.getLoadedView.bind(this);
+        this.getTasks = this.getTasks.bind(this);
+        this.setIsLoaded = this.setIsLoaded.bind(this);
     }
 
     componentDidMount() {
-        fetch(API_URL + '/tasks')
-            .then(response => response.json())
-            .then(result => {
-                this.setState({
-                    isLoaded: true,
-                    tasks: result
-                });
-            }, error => {
-                this.setState({
-                    isLoaded: true,
-                    error: error
-                });
-            });
+        this.getTasks();
     }
 
     render() {
@@ -60,7 +50,7 @@ export default class ToDo extends Component {
             <div id="ToDoComponent">
                 <div className="container">
                     <h1 className="pt-5 pb-5 mb-3 rounded display-4">TODO</h1>
-                    <TaskAdd />
+                    <TaskAdd refreshState={this.getTasks} setIsLoaded={this.setIsLoaded} />
                     <div id="toDoTable" className="p-2 rounded">
                         {view}
                     </div>
@@ -78,5 +68,27 @@ export default class ToDo extends Component {
                 ))}
             </span>
         );
+    }
+
+    getTasks() {
+        fetch(API_URL + '/tasks')
+            .then(response => response.json())
+            .then(result => {
+                this.setState({
+                    isLoaded: true,
+                    tasks: result
+                });
+            }, error => {
+                this.setState({
+                    isLoaded: true,
+                    error: error
+                });
+            });
+    }
+
+    setIsLoaded(isLoaded) {
+        this.setState({
+            isLoaded: isLoaded
+        });
     }
 }
