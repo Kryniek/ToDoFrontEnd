@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 
-import './../../css/component/util/Loading.css';
+import './../../../css/component/util/component/Loading.css';
 
 export default class Loading extends Component {
     render() {
