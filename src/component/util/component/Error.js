@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSadTear } from '@fortawesome/free-solid-svg-icons'
 
-import './../../css/component/util/Error.css';
+import './../../../css/component/util/component/Error.css';
 
 export default class Error extends Component {
     render() {

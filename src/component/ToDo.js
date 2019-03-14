@@ -7,8 +7,8 @@ import { API_URL } from './constant/ApiConstants';
 import TaskGridHeader from './TaskGridHeader';
 import Task from './Task';
 import TaskAdd from './TaskAdd';
-import Loading from './util/Loading';
-import Error from './util/Error';
+import Loading from './util/component/Loading';
+import Error from './util/component/Error';
 
 export default class ToDo extends Component {
     constructor(props) {

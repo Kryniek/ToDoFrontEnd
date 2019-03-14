@@ -6,6 +6,13 @@
     transition: 0.35s ease-out;
 }
 
+.TaskComponent>.row>.col-3>p, .TaskComponent>.row>.col>p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .TaskComponent>.row>.col>p, .TaskComponent>.row>.col-3>p, .deleteButton, .editButton {
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.2rem;

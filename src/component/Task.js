@@ -44,8 +44,8 @@ export default class Task extends Component {
         }
 
         return (
-            <div className="TaskComponent mt-1 mb-1">
-                <div className="row ml-0 mr-0">
+            <div className="TaskComponent pt-1 pb-1">
+                <div className="row ml-0 mr-0 pt-2 pb-2">
                     <div className="col">
                         <p>{task.name}</p>
                     </div>
