@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
+import moment from 'moment/moment';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 
-import './../css/component/Task.css';
+import './../css/component/task/Task.css';
 
 import { DATE_FORMAT } from './constant/DateConstants';
 import TaskEdit from './TaskEdit';
@@ -16,6 +17,7 @@ export default class Task extends Component {
 
         this.setIsEditingState = this.setIsEditingState.bind(this);
         this.setIsDeletingState = this.setIsDeletingState.bind(this);
+        this.getRowColor = this.getRowColor.bind(this);
 
         this.state = {
             isEditing: false,
@@ -49,14 +51,17 @@ export default class Task extends Component {
             );
         }
 
+
+        var taskDeadline = task.deadline;
+
         return (
-            <div className="TaskComponent pt-1 pb-1">
-                <div className="row ml-0 mr-0 pt-2 pb-2">
+            <div className={"TaskComponent pt-1 pb-1 ".concat(this.getRowColor(taskDeadline))}>
+                <div className="row ml-0 mr-0 pt-2 pb-2 rounded">
                     <div className="col">
                         <p>{task.name}</p>
                     </div>
                     <div className="col-3">
-                        <p><Moment date={task.deadline} format={DATE_FORMAT} /></p>
+                        <p><Moment date={taskDeadline} format={DATE_FORMAT} /></p>
                     </div>
                     <div className="col-2">
                         <span className="col-6">
@@ -85,5 +90,18 @@ export default class Task extends Component {
         this.setState({
             isDeleting: isDeleting
         })
+    }
+
+    getRowColor(taskDeadline) {
+        const nowAndTaskDeadlineDifference = moment().diff(taskDeadline, "days");
+        var rowColorClass = "";
+
+        if (nowAndTaskDeadlineDifference > 0) {
+            rowColorClass = "missedDeadlineTaskRow";
+        } else if (nowAndTaskDeadlineDifference === 0) {
+            rowColorClass = "reachedDeadlineTaskRow";
+        }
+
+        return rowColorClass;
     }
 }

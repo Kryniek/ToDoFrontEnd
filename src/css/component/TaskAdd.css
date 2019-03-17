@@ -1,3 +1,21 @@
+@media only screen and (min-width: 0px) {
+    .TaskAddComponent>.row>.col>p, .TaskAddComponent>.row>.col-3>p, .addButton {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .TaskAddComponent>.row>.col>p, .TaskAddComponent>.row>.col-3>p, .addButton {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .TaskAddComponent>.row>.col>p, .TaskAddComponent>.row>.col-3>p, .addButton {
+        font-size: 1.2rem;
+    }
+}
+
 .TaskAddComponent {
     position: relative;
 }
@@ -8,7 +26,6 @@
 
 .TaskAddComponent>.row>.col>p, .TaskAddComponent>.row>.col-3>p, .addButton {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 1.2rem;
 }
 
 .addButton:hover {

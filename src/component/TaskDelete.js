@@ -18,7 +18,7 @@ export default class TaskDelete extends Component {
     render() {
         return (
             <div className="TaskDeleteComponent mt-3 pb-3">
-                <div className="row ml-0 mr-0">
+                <div className="row ml-0 mr-0 rounded">
                     <span className="col">
                         <p><b>Czy na pewno chcesz usunąć zadanie: "{this.props.task.name}"?</b></p>
                     </span>
