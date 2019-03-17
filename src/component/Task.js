@@ -27,7 +27,11 @@ export default class Task extends Component {
 
     render() {
         var state = this.state;
-        var task = this.props.task;
+        var {
+            task,
+            refreshState,
+            setIsLoaded
+        } = this.props;
 
         if (state.isEditing) {
             return (
@@ -39,8 +43,10 @@ export default class Task extends Component {
         } else if (state.isDeleting) {
             return (
                 <TaskDelete
-                    name={task.name}
+                    task={task}
                     setIsDeletingState={this.setIsDeletingState}
+                    refreshState={refreshState}
+                    setIsLoaded={setIsLoaded}
                 />
             );
         }

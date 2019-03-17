@@ -64,7 +64,11 @@ export default class ToDo extends Component {
             <span>
                 <TaskGridHeader />
                 {this.state.tasks.map(task => (
-                    <Task key={task.id} task={task} />
+                    <Task key={task.id}
+                        task={task}
+                        refreshState={this.getTasks}
+                        setIsLoaded={this.setIsLoaded}
+                    />
                 ))}
             </span>
         );
