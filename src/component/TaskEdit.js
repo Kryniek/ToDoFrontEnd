@@ -72,7 +72,6 @@ export default class TaskEdit extends Component {
         } = this.props;
         const newTask = this.state.newTask;
 
-        debugger;
         const isNewNameDifferentThanOldName = !!newTask.name && newTask.name !== task.name;
         const isNewDeadlineDifferentThanOldDeadline = !!newTask.deadline && newTask.deadline !== task.name;
 
