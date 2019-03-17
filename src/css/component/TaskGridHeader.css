@@ -1,6 +1,23 @@
 @import url("./../util/hr.css");
+@media only screen and (min-width: 0px) {
+    #TaskGridHeaderComponent {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #TaskGridHeaderComponent {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #TaskGridHeaderComponent {
+        font-size: 1.5rem;
+    }
+}
+
 #TaskGridHeaderComponent {
     position: relative;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 1.5rem;
 }

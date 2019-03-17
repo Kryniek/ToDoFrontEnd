@@ -22,7 +22,7 @@ export default class TaskEdit extends Component {
 
         return (
             <div className="TaskEditComponent mt-3 pb-3">
-                <div className="row ml-0 mr-0">
+                <div className="row ml-0 mr-0 rounded">
                     <span className="col">
                         <input className="form-control" type="text" placeholder={task.name} />
                     </span>
