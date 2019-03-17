@@ -38,6 +38,8 @@ export default class Task extends Component {
                 <TaskEdit
                     task={task}
                     setIsEditingState={this.setIsEditingState}
+                    refreshState={refreshState}
+                    setIsLoaded={setIsLoaded}
                 />
             );
         } else if (state.isDeleting) {
