@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container'
 
 import '../css/component/ToDo.css';
 
@@ -48,13 +49,13 @@ export default class ToDo extends Component {
 
         return (
             <div id="ToDoComponent">
-                <div className="container">
+                <Container>
                     <h1 className="pt-5 pb-5 mb-3 rounded display-4">TODO</h1>
                     <TaskAdd refreshState={this.getTasks} setIsLoaded={this.setIsLoaded} />
                     <div id="toDoTable" className="p-2 rounded">
                         {view}
                     </div>
-                </div>
+                </Container>
             </div>
         );
     }
