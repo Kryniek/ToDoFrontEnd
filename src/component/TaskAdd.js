@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -29,16 +32,16 @@ export default class TaskAdd extends Component {
     render() {
         return (
             <div className="TaskAddComponent mt-2 mb-2 pl-2 pr-2 pt-3 pb-3 rounded">
-                <div className="row ml-0 mr-0">
-                    <span className="col">
+                <Row className="ml-0 mr-0">
+                    <Col className="fakeSpan">
                         <input
                             className="form-control"
                             type="text"
                             placeholder="Nowe zadanie"
                             onChange={this.setName}
                         />
-                    </span>
-                    <span className="col-3">
+                    </Col>
+                    <Col xs={3} className="fakeSpan">
                         <DateTime
                             defaultValue={new Date()}
                             dateFormat="YYYY-MM-DD"
@@ -46,15 +49,15 @@ export default class TaskAdd extends Component {
                             locale="pl"
                             onChange={this.setDeadline}
                         />
-                    </span>
-                    <div className="col-2">
-                        <span className="col-12">
+                    </Col>
+                    <Col xs={2} className="fakeSpan">
+                        <Col xs={12} className="fakeSpan">
                             <span className="addButton" onClick={this.onAdd}>
                                 <FontAwesomeIcon icon={faPlus} />
                             </span>
-                        </span>
-                    </div>
-                </div>
+                        </Col>
+                    </Col>
+                </Row>
             </div>
         );
     }

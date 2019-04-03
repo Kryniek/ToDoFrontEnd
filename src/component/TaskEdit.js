@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -29,16 +32,16 @@ export default class TaskEdit extends Component {
 
         return (
             <div className="TaskEditComponent mt-3 pb-3">
-                <div className="row ml-0 mr-0 rounded">
-                    <span className="col">
+                <Row className="ml-0 mr-0 rounded">
+                    <Col>
                         <input
                             className="form-control"
                             type="text"
                             placeholder={task.name}
                             onChange={this.setName}
                         />
-                    </span>
-                    <span className="col-3">
+                    </Col>
+                    <Col xs={3}>
                         <DateTime
                             defaultValue={new Date(task.deadline)}
                             dateFormat="YYYY-MM-DD"
@@ -46,20 +49,20 @@ export default class TaskEdit extends Component {
                             locale="pl"
                             onChange={this.setDeadline}
                         />
-                    </span>
-                    <div className="col-2">
-                        <span className="col-6">
+                    </Col>
+                    <Col xs={2}>
+                        <Col xs={6} className="fakeSpan">
                             <span className="confirmButton" onClick={this.onConfirm}>
                                 <FontAwesomeIcon icon={faCheck} />
                             </span>
-                        </span>
-                        <span className="col-6">
+                        </Col>
+                        <Col xs={6} className="fakeSpan">
                             <span className="rejectButton" onClick={this.onReject}>
                                 <FontAwesomeIcon icon={faTimes} />
                             </span>
-                        </span>
-                    </div>
-                </div>
+                        </Col>
+                    </Col>
+                </Row>
             </div>
         );
     }

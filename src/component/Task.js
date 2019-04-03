@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import Moment from 'react-moment';
 import moment from 'moment/moment';
 
@@ -58,26 +62,26 @@ export default class Task extends Component {
 
         return (
             <div className={"TaskComponent pt-1 pb-1 ".concat(this.getRowColor(taskDeadline))}>
-                <div className="row ml-0 mr-0 pt-2 pb-2 rounded">
-                    <div className="col">
+                <Row className="ml-0 mr-0 pt-2 pb-2 rounded">
+                    <Col>
                         <p>{task.name}</p>
-                    </div>
-                    <div className="col-3">
+                    </Col>
+                    <Col xs={3}>
                         <p><Moment date={taskDeadline} format={DATE_FORMAT} /></p>
-                    </div>
-                    <div className="col-2">
-                        <span className="col-6">
+                    </Col>
+                    <Col xs={2}>
+                        <Col xs={6} className="fakeSpan">
                             <span className="editButton" onClick={() => this.setIsEditingState(true)}>
                                 <FontAwesomeIcon icon={faEdit} />
                             </span>
-                        </span>
-                        <span className="col-6">
+                        </Col>
+                        <Col xs={6} className="fakeSpan">
                             <span className="deleteButton" onClick={() => this.setIsDeletingState(true)}>
                                 <FontAwesomeIcon icon={faTrashAlt} />
                             </span>
-                        </span>
-                    </div>
-                </div>
+                        </Col>
+                    </Col>
+                </Row>
             </div>
         );
     }
