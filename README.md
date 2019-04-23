@@ -92,7 +92,7 @@ We were working in two-person team supported by Scrum metodology. We keept most 
 
 ![2](https://github.com/justam92/ToDoFrontEnd/blob/master/screens/2.png)
 
-![3](https://github.com/justam92/ToDoFrontEnd/blob/master/screens/2.png)
+![3](https://github.com/justam92/ToDoFrontEnd/blob/master/screens/3.png)
 
 ![4](https://github.com/justam92/ToDoFrontEnd/blob/master/screens/4.png)
 
